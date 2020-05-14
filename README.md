@@ -2,7 +2,7 @@
 
 # NGUYỄN THỊ HOÀI
 # Ảnh của từng yêu cầu ở folder Image
-# Yêu cầu 1:
+# Câu số 1:
 - Số lượng các node: 2
 - Thông tin chi tiết của từng node: Cost, rows, width
 	+ `Node 1`: cost=0.00..69.00 rows=43 width=174
@@ -12,7 +12,7 @@
 	+ Đọc từng dòng từ bảng `film` và so sánh với điều kiện: `rating` = 'PG-13' AND `rental_duration` = 7 
 	+ Các dòng lấy ra ở bước 1 được sắp xếp theo chiều `length` DESC
   
-# Yêu cầu 2:
+# Câu số 2:
 - Số lượng các node: 3
 - Thông tin chi tiết của từng node: Cost, rows, width
 	+ `Node 1`: cost=0.00..66.50 rows=191 width=6
@@ -24,7 +24,7 @@
 	+ Các dòng lấy ra ở bước 1 được tính trung bình `length` theo GROUP BY `rating`
 	+ Sắp xếp các bản ghi trả về từ bước 2 theo chiều `length` DESC
 
-# Yêu cầu 3:
+# Câu số 3:
 - Số lượng các node: 3
 - Thông tin chi tiết của từng node: Cost, rows, width
 	+ `Node 1`: cost=0.00..66.50 rows=191 width=6
@@ -36,7 +36,7 @@
   + Các dòng lấy ra ở bước 1 được tính trung bình `length` theo GROUP BY `rating` và so sánh với điều kiện: `AVG(length)` > 115
 	+ Sắp xếp các bản ghi trả về từ bước 2 theo chiều `rating` DESC
 
-# Yêu cầu 4:
+# Câu số 4:
 - Số lượng các node: 5
 - Thông tin chi tiết của từng node: Cost, rows, width
 	+ `Node 1`: cost=0.00..1.06 rows=6 width=88
@@ -51,7 +51,7 @@
   + Các dòng lấy ra ở bước 1 và bước 2 được join với nhau thỏa mãn điều kiện: `film.language_id` = `language.language_id`
   + Sắp xếp các bản ghi trả về từ bước 5 theo chiều `language.name` DESC
 
-# Yêu cầu 5:
+# Câu số 5:
 - Số lượng các node: 6
 - Thông tin chi tiết của từng node: Cost, rows, width
 	+ `Node 1`: cost=0.00..1.06 rows=6 width=88
@@ -68,7 +68,7 @@
   + Tính toán theo GROUP BY `language.name` 
 	+ Sắp xếp các bản ghi trả về từ bước 4 theo chiều `language.name` DESC
 
-# Yêu cầu 6:
+# Câu số 6:
 - Số lượng các node: 8
 - Thông tin chi tiết của từng node: Cost, rows, width
 	+ `Node 1`: cost=0.00..4.00 rows=200 width=17
@@ -88,7 +88,7 @@
   + Các dòng lấy ra ở bước 1 và bước 5 được `join` với nhau thỏa mãn điều kiện: `film_actor.actor_id` = `actor.actor_id`
   + Tính toán theo GROUP BY `actor.first_name` và `actor.last_name`
   
-  # Yêu cầu 7:
+# Câu số 7:
 - Số lượng các node: 12
 - Thông tin chi tiết của từng node: Cost, rows, width
 	+ `Node 1`: cost=0.00..1.16 rows=16 width=72
