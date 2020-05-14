@@ -33,7 +33,7 @@
 - Node nào được chạy đầu tiên: `Node 1`
 - Trình tự thực hiện các node:
 	+ Đọc từng dòng trong bảng, mỗi dòng lại tiến hành so sánh với điều kiện: `rental_duration` = 7
-  + Các dòng lấy ra ở bước 1 được tính trung bình `length` theo GROUP BY `rating` và so sánh với điều kiện: `AVG(length)` > 115
+  	+ Các dòng lấy ra ở bước 1 được tính trung bình `length` theo GROUP BY `rating` và so sánh với điều kiện: `AVG(length)` > 115
 	+ Sắp xếp các bản ghi trả về từ bước 2 theo chiều `rating` DESC
 
 # Câu số 4:
@@ -46,10 +46,10 @@
 	+ `Node 5`: cost=87.71..88.75 rows=418 width=103
 - Node nào được chạy đầu tiên: `Node 1`
 - Trình tự thực hiện các node: 
-  + Đọc từng dòng trong bảng `language`
-  + Đọc từng dòng trong bảng `film`, mỗi dòng lại tiến hành so sánh với điều kiện: `rating` = 'R' hoặc `rating` = 'PG-13'
-  + Các dòng lấy ra ở bước 1 và bước 2 được join với nhau thỏa mãn điều kiện: `film.language_id` = `language.language_id`
-  + Sắp xếp các bản ghi trả về từ bước 5 theo chiều `language.name` DESC
+  	+ Đọc từng dòng trong bảng `language`
+  	+ Đọc từng dòng trong bảng `film`, mỗi dòng lại tiến hành so sánh với điều kiện: `rating` = 'R' hoặc `rating` = 'PG-13'
+  	+ Các dòng lấy ra ở bước 1 và bước 2 được join với nhau thỏa mãn điều kiện: `film.language_id` = `language.language_id`
+  	+ Sắp xếp các bản ghi trả về từ bước 5 theo chiều `language.name` DESC
 
 # Câu số 5:
 - Số lượng các node: 6
@@ -62,10 +62,10 @@
 	+ `Node 6`: cost=71.75..71.77 rows=6 width=116
 - Node nào được chạy đầu tiên: `Node 1`
 - Trình tự thực hiện các node: 
-  + Đọc từng dòng trong bảng `language`
+  	+ Đọc từng dòng trong bảng `language`
 	+ Đọc từng dòng trong bảng `film`, mỗi dòng lại tiến hành so sánh với điều kiện: `rating` = 'R' hoặc `rating` = 'PG-13'
 	+ Các dòng lấy ra ở bước 1 và bước 2 được join với nhau thỏa mãn điều kiện: `film.language_id` = `language.language_id`
-  + Tính toán theo GROUP BY `language.name` 
+  	+ Tính toán theo GROUP BY `language.name` 
 	+ Sắp xếp các bản ghi trả về từ bước 4 theo chiều `language.name` DESC
 
 # Câu số 6:
@@ -76,17 +76,17 @@
 	+ `Node 3`: cost=0.00..64.00 rows=1000 width=4
 	+ `Node 4`: cost=64.00..64.00 rows=1000 width=4
 	+ `Node 5`: cost=0.00..84.62 rows=5462 width=4
-  + `Node 6`: cost=76.50..175.51 rows=5462 width=6
+  	+ `Node 6`: cost=76.50..175.51 rows=5462 width=6
 	+ `Node 7`: cost=83.00..196.65 rows=5462 width=17
 	+ `Node 8`: cost=237.62..238.90 rows=128 width=21
 - Node nào được chạy đầu tiên: `Node 1`
 - Trình tự thực hiện các node: 
-  + Đọc từng dòng trong bảng `actor`	
-  + Đọc từng dòng trong bảng `film`
-  + Đọc từng dòng trong bảng `film_actor`
-  + Các dòng lấy ra ở bước 3 và bước 5 được `join` với nhau thỏa mãn điều kiện: `film_actor.film_id` = `film.film_id`
-  + Các dòng lấy ra ở bước 1 và bước 5 được `join` với nhau thỏa mãn điều kiện: `film_actor.actor_id` = `actor.actor_id`
-  + Tính toán theo GROUP BY `actor.first_name` và `actor.last_name`
+  	+ Đọc từng dòng trong bảng `actor`	
+  	+ Đọc từng dòng trong bảng `film`
+  	+ Đọc từng dòng trong bảng `film_actor`
+  	+ Các dòng lấy ra ở bước 3 và bước 5 được `join` với nhau thỏa mãn điều kiện: `film_actor.film_id` = `film.film_id`
+  	+ Các dòng lấy ra ở bước 1 và bước 5 được `join` với nhau thỏa mãn điều kiện: `film_actor.actor_id` = `actor.actor_id`
+  	+ Tính toán theo GROUP BY `actor.first_name` và `actor.last_name`
   
 # Câu số 7:
 - Số lượng các node: 12
